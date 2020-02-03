@@ -1,5 +1,5 @@
 [package]
-name = "hello-rust-wasm"
+name = "rsocket_rust_wasm_example"
 version = "0.1.0"
 authors = ["Jeffsky <jjeffcaii@outlook.com>"]
 edition = "2018"
@@ -19,16 +19,3 @@ branch = "improve/pick_transport"
 [dependencies.rsocket_rust_transport_wasm]
 git = "https://github.com/rsocket/rsocket-rust"
 branch = "improve/pick_transport"
-
-[dependencies.web-sys]
-version = "0.3"
-features = [
-  "FileReader",
-  "ProgressEvent",
-  "Event",
-  "Blob",
-  "BlobEvent",
-  "ErrorEvent",
-  "MessageEvent",
-  "WebSocket",
-]
