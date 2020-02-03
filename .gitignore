@@ -1,0 +1,14 @@
+/target
+**/*.rs.bk
+Cargo.lock
+node_modules
+/pkg
+
+
+#Added by cargo
+#
+#already existing elements are commented out
+
+#/target
+#**/*.rs.bk
+#Cargo.lock

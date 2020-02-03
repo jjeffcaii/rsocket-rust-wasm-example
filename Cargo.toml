@@ -1,0 +1,34 @@
+[package]
+name = "hello-rust-wasm"
+version = "0.1.0"
+authors = ["Jeffsky <jjeffcaii@outlook.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4.8"
+js-sys = "0.3"
+
+[dependencies.rsocket_rust]
+git = "https://github.com/rsocket/rsocket-rust"
+branch = "improve/pick_transport"
+
+[dependencies.rsocket_rust_transport_wasm]
+git = "https://github.com/rsocket/rsocket-rust"
+branch = "improve/pick_transport"
+
+[dependencies.web-sys]
+version = "0.3"
+features = [
+  "FileReader",
+  "ProgressEvent",
+  "Event",
+  "Blob",
+  "BlobEvent",
+  "ErrorEvent",
+  "MessageEvent",
+  "WebSocket",
+]
