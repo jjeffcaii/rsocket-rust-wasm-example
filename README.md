@@ -2,19 +2,32 @@
 
 An example which show how RSocket works in browser with Rust + Webassembly.
 
+![layer](./layer.png)
+
 ## Getting Start
 
-### Preparements
+### Requirements
 
 - Rust 1.39+
-- NodeJS
+- Node.js
+- Start an websocket RSocket server
 
-### Start An Websocket RSocket Echo Server
+### Run
 
-You can use [rsocket-cli](https://github.com/rsocket/rsocket-go) to start an echo server.
+1. Install `wasm-pack` tool: `cargo install wasm-pack`
+2. Execute `wasm-pack build`
+3. Execute `yarn` (or `npm install`)
+4. Execute `yarn run serve` (or `npm run serve`)
+5. Open [http://localhost:8080/](http://localhost:8080/) and you will see an alerting dialog with response message.
+
+## FAQ
+
+> How to start an websocket RSocket echo server?
+
+You can use [rsocket-cli](https://github.com/rsocket/rsocket-cli) to start an echo server.
 
 ```shell
-$ RSOCKET_WS_CORS=true ./rsocket-cli -i 'Pong!' -s --debug ws://127.0.0.1:7878
+$ rsocket-cli -i 'Pong!' --server --debug ws://127.0.0.1:7878
 ```
 
 Or you can write some code, here's a java example.
@@ -57,10 +70,3 @@ public class Foboar {
 }
 
 ```
-
-### Run
-
-1. Install `wasm-pack` tool: `cargo install wasm-pack`
-2. Run `wasm-pack build`
-3. Run `yarn run serve` (or `npm run serve`)
-4. Open [http://localhost:8080/](http://localhost:8080/) and you will see an alert dialog with response message
