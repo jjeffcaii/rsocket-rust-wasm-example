@@ -14,6 +14,7 @@ An example which show how RSocket works in browser with Rust + Webassembly.
 
 ### Run
 
+0. Clean: `rm -fr target && rm -f Cargo.lock`
 1. Install `wasm-pack` tool: `cargo install wasm-pack`
 2. Execute `wasm-pack build`
 3. Execute `yarn` (or `npm install`)
