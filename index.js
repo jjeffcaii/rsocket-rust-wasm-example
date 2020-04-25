@@ -10,6 +10,8 @@ let data = encoder.encode("ping");
 
 rust
     .then(m => {
+        m.example_request_response("go go go!").then();
+
         say('connecting...');
 
         m.connect("ws://127.0.0.1:7878")
