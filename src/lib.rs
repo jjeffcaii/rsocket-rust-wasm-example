@@ -15,7 +15,7 @@ extern "C" {
 pub async fn example_request_response(data: String) {
     let cli = RSocketFactory::connect()
         .transport(WebsocketClientTransport::from("ws://127.0.0.1:7878"))
-        .start_with_runtime(WASMSpawner)
+        .start()
         .await
         .expect("Connect failed!");
     let res = cli

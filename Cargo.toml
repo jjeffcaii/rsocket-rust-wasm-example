@@ -8,16 +8,20 @@ edition = "2018"
 crate-type = ["cdylib"]
 
 [dependencies]
-wasm-bindgen-futures = "0.4.10"
-js-sys = "0.3.37"
-futures-channel = "0.3.4"
-futures-util = "0.3.4"
-bytes = "0.5.4"
-serde = "1.0.106"
-serde_derive = "1.0.106"
-rsocket_rust = "0.5.1"
-rsocket_rust_transport_wasm = "0.5.1"
+wasm-bindgen-futures = "0.4.18"
+js-sys = "0.3.45"
+futures-channel = "0.3.5"
+futures-util = "0.3.5"
+bytes = "0.5.6"
+serde = "1.0.116"
+serde_derive = "1.0.116"
+
+[dependencies.rsocket_rust]
+path = "../rsocket-rust/rsocket"
+
+[dependencies.rsocket_rust_transport_wasm]
+path = "../rsocket-rust/rsocket-transport-wasm"
 
 [dependencies.wasm-bindgen]
-version = "0.2.60"
+version = "0.2.68"
 features = ["serde-serialize"]
